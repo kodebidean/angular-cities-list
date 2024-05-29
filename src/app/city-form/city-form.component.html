@@ -1,0 +1,24 @@
+<div class="font-sans md:font-serif mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-lg  border-2 shadow-lg">
+    <h2 class="font-bold text-center text-lg sm:text-xl lg:text-3xl mt-4  text-indigo-600 ">Añadir Ciudad</h2>
+    <form (ngSubmit)="onSubmit()" class="mb-0 space-y-4 rounded-lg p-4 sm:p-6 lg:p-8">
+      <div>
+        <label for="city" class="block text-sm font-medium text-gray-700">Ciudad</label>
+        <input id="city" name="city" type="text" [(ngModel)]="city" class="w-full rounded-lg shadow-md transition border-2 p-4 text-sm hover:shadow-lg" required>
+      </div>
+      <div>
+        <label for="country" class="block text-sm font-medium text-gray-700">País</label>
+        <input id="country" name="country" type="text" [(ngModel)]="country" class="w-full rounded-lg shadow-md transition border-2 p-4 text-sm hover:shadow-lg" required>
+      </div>
+      <div>
+        <label for="month" class="block text-sm font-medium text-gray-700">Mes</label>
+        <select id="month" name="month" [(ngModel)]="month" class="w-20 rounded-lg shadow-md transition border-2 p-4 text-sm hover:shadow-lg" required>
+          <option *ngFor="let m of months" [value]="m">{{ m }}</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="w-full font-bold bg-blue-500 text-white py-2 rounded-md transition active:bg-blue-300">Agregar</button>
+      </div>
+    </form>
+  </div>
+</div>

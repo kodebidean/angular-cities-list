@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CityFormComponent } from './city-form/city-form.component';
+import { CityListComponent } from './city-list/city-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CityFormComponent, CityListComponent],
+  template: `
+    <app-city-form></app-city-form>
+    <app-city-list></app-city-list>
+  `,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'citylist-lmgsactivity';
-}
+export class AppComponent {}
